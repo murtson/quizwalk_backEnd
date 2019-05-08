@@ -1,0 +1,25 @@
+[debug] [2019-05-08T12:44:23.337Z] ----------------------------------------------------------------------
+[debug] [2019-05-08T12:44:23.340Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Martin Mosesson\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve --only hosting
+[debug] [2019-05-08T12:44:23.340Z] CLI Version:   6.9.0
+[debug] [2019-05-08T12:44:23.340Z] Platform:      win32
+[debug] [2019-05-08T12:44:23.340Z] Node Version:  v10.15.1
+[debug] [2019-05-08T12:44:23.342Z] Time:          Wed May 08 2019 14:44:23 GMT+0200 (GMT+02:00)
+[debug] [2019-05-08T12:44:23.342Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-05-08T12:44:23.352Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-05-08T12:44:23.352Z] > authorizing via signed-in user
+[debug] [2019-05-08T12:44:23.352Z] [iam] checking project tipsrundan-76362 for permissions ["firebase.projects.get"]
+[debug] [2019-05-08T12:44:23.354Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/tipsrundan-76362:testIamPermissions  
+
+[debug] [2019-05-08T12:44:24.303Z] <<< HTTP RESPONSE 200
+[debug] [2019-05-08T12:44:24.308Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/tipsrundan-76362  
+ 
+[debug] [2019-05-08T12:44:25.227Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\Martin Mosesson\Desktop\quizwalking'...
+[info] 
+[debug] [2019-05-08T12:44:25.229Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/1090643763325/clients/_:getWebAppConfig  
+ 
+[debug] [2019-05-08T12:44:25.706Z] <<< HTTP RESPONSE 200
+[info] i  hosting[tipsrundan]: Serving hosting files from: public
+[info] +  hosting[tipsrundan]: Local server: http://localhost:5000

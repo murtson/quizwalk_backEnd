@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Welcome to Firebase Hosting</title>
+  </head>
+  <body>
+    <div id="message">
+      <h2>Welcome</h2>
+      <h1>Firebase Hosting Setup Complete</h1>
+      <p>
+        You're seeing this because you've successfully setup Firebase Hosting.
+        Now it's time to go build something extraordinary!
+      </p>
+    </div>
+    <form id="signup-form">
+      <label for="email"><b>Email</b></label>
+      <input
+        type="email"
+        placeholder="Enter Email"
+        name="email"
+        required
+        id="signup-email"
+      />
+      <label for="psw"><b>Password</b></label>
+      <input
+        type="password"
+        placeholder="Enter Password"
+        name="psw"
+        required
+        id="signup-password"
+      />
+      <button>sign up</button>
+    </form>
+
+    <div id="user-pic">user pic</div>
+    <div id="user-name">user name</div>
+    <p id="load">Firebase SDK Loading&hellip;</p>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+        // // The Firebase SDK is initialized and available here!
+        //
+        // firebase.auth().onAuthStateChanged(user => { });
+        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
+        // firebase.messaging().requestPermission().then(() => { });
+        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
+        //
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+
+        try {
+          let app = firebase.app();
+          let features = ["auth", "database", "messaging", "storage"].filter(
+            feature => typeof app[feature] === "function"
+          );
+          document.getElementById(
+            "load"
+          ).innerHTML = `Firebase SDK loaded with ${features.join(", ")}`;
+        } catch (e) {
+          console.error(e);
+          document.getElementById("load").innerHTML =
+            "Error loading the Firebase SDK, check the console.";
+        }
+      });
+    </script>
+
+    <!-- <script src="main.js"></script> -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.0.1/firebase-app.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+    <script src="https://www.gstatic.com/firebasejs/6.0.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.0/firebase-storage.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyAXnTR9W3Pl82l6z4ZR4HeOqG-DGkgMtNs",
+        authDomain: "tipsrundan-76362.firebaseapp.com",
+        databaseURL: "https://tipsrundan-76362.firebaseio.com",
+        projectId: "tipsrundan-76362",
+        storageBucket: "tipsrundan-76362.appspot.com",
+        messagingSenderId: "1090643763325",
+        appId: "1:1090643763325:web:92344f007940b0d1"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+
+      const auth = firebase.auth();
+      const db = firebase.firestore();
+    </script>
+    <script src="scripts/auth.js"></script>
+  </body>
+</html>
