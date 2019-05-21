@@ -4,42 +4,69 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Welcome to Firebase Hosting</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
   </head>
   <body>
     <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>
-        You're seeing this because you've successfully setup Firebase Hosting.
-        Now it's time to go build something extraordinary!
-      </p>
+      <h2>Welcome to quizwalk</h2>
     </div>
-    <form id="signup-form">
-      <label for="email"><b>Email</b></label>
-      <input
-        type="email"
-        placeholder="Enter Email"
-        name="email"
-        required
-        id="signup-email"
-      />
-      <label for="psw"><b>Password</b></label>
-      <input
-        type="password"
-        placeholder="Enter Password"
-        name="psw"
-        required
-        id="signup-password"
-      />
-      <button>sign up</button>
-    </form>
 
-    <div id="user-pic">user pic</div>
-    <div id="user-name">user name</div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
+    <div id="login-page" style="display: none;">
+      <h1>Login Page</h1>
+      <form id="signup-form">
+        <h1>Sign Up</h1>
+        <label for="email"><b>Email</b></label>
+        <input
+          type="email"
+          placeholder="Enter Email"
+          name="email"
+          required
+          id="signup-email"
+        />
+        <label for="psw"><b>Password</b></label>
+        <input
+          type="password"
+          placeholder="Enter Password"
+          name="psw"
+          required
+          id="signup-password"
+        />
+        <button>sign up</button>
+      </form>
+
+      <form id="login-form">
+        <h1>Login</h1>
+        <label for="email"><b>Email</b></label>
+        <input
+          type="email"
+          placeholder="Enter Email"
+          name="email"
+          required
+          id="login-email"
+        />
+        <label for="psw"><b>Password</b></label>
+        <input
+          type="password"
+          placeholder="Enter Password"
+          name="psw"
+          required
+          id="login-password"
+        />
+        <button>login</button>
+      </form>
+    </div>
+
+    <div id="content-page" style="display: none;">
+      <div id="user-name">{name}</div>
+      <button id="logout">Log out</button>
+
+      <div>
+        <ul id="user-score"></ul>
+      </div>
+    </div>
 
     <script>
-      document.addEventListener("DOMContentLoaded", function() {
+      /* document.addEventListener("DOMContentLoaded", function() {
         // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
         // // The Firebase SDK is initialized and available here!
         //
@@ -63,7 +90,7 @@
           document.getElementById("load").innerHTML =
             "Error loading the Firebase SDK, check the console.";
         }
-      });
+      }); */
     </script>
 
     <!-- <script src="main.js"></script> -->
@@ -93,5 +120,6 @@
       const db = firebase.firestore();
     </script>
     <script src="scripts/auth.js"></script>
+    <script src="scripts/index.js"></script>
   </body>
 </html>
